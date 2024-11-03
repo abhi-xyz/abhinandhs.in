@@ -4,6 +4,7 @@ export default {
   darkMode: 'class',
   content: [
     "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
+    "{routes,islands,components}/**/**/*.{ts,tsx,js,jsx}",
   ],
   plugins: [
   ],
