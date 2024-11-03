@@ -1,6 +1,7 @@
 import { useSignal } from "@preact/signals";
 import Counter from "../islands/Counter.tsx";
 import Navbar from "../islands/Header.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function Home() {
   const count = useSignal(3);
@@ -24,6 +25,7 @@ export default function Home() {
         <Counter count={count} />
       </div>
     </div>
+    <Footer />
     </>
   );
 }
