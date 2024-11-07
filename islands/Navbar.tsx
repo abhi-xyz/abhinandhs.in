@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div class="font-bold z-20 absolute left-0 top-0 w-full">
+      <div class="font-bold z-20 absolute fixed left-0 top-0 w-full">
         <nav class="bg-mocha-base w-full min-h-32 max-tablet:min-h-16 top-0 left-0 z-50">
           <div class="mx-auto">
             <div class="flex justify-between items-center pt-8 max-tablet:py-4 px-4">
