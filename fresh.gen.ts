@@ -8,8 +8,10 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $articles_index from "./routes/articles/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $rss from "./routes/rss.tsx";
 import * as $wip_index from "./routes/wip/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $GetArticles from "./islands/GetArticles.tsx";
 import * as $Header from "./islands/Header.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
 import * as $ThemeSwitcher from "./islands/ThemeSwitcher.tsx";
@@ -23,10 +25,12 @@ const manifest = {
     "./routes/articles/index.tsx": $articles_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/rss.tsx": $rss,
     "./routes/wip/index.tsx": $wip_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/GetArticles.tsx": $GetArticles,
     "./islands/Header.tsx": $Header,
     "./islands/Navbar.tsx": $Navbar,
     "./islands/ThemeSwitcher.tsx": $ThemeSwitcher,
