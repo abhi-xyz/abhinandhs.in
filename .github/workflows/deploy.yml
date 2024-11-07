@@ -32,5 +32,3 @@ jobs:
           project: "abhinandhs"
           entrypoint: "main.ts"
           root: "."
-          
-          

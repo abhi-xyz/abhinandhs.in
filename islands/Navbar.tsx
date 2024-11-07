@@ -9,8 +9,8 @@ export default function Navbar() {
 
   return (
     <div class="font-bold">
-      <nav class="bg-mocha-base shadow-md w-full min-h-32 max-tablet:min-h-16 top-0 left-0 z-10">
-        <div class="container mx-auto px-4">
+      <nav class="bg-mocha-base shadow-md w-full min-h-32 max-tablet:min-h-16 top-0 left-0 z-50">
+        <div class="mx-auto">
           <div class="flex justify-between items-center pt-8 max-tablet:py-4">
             {/* Logo */}
             <div
@@ -62,7 +62,7 @@ export default function Navbar() {
           <div
             class={`${
               isMenuOpen ? "" : "hidden"
-            } md:hidden flex flex-col items-center`}
+            } md:hidden flex flex-col h-lvh w-2/3 bg-vibez-red float-right items-center z-50`}
           >
             <a
               href="/"
