@@ -24,4 +24,3 @@ export const getArticles = async (): Promise<Article[]> => {
     },
   ];
 };
-
