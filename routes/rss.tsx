@@ -13,7 +13,7 @@ export const handler: Handlers = {
       <?xml version="1.0" encoding="UTF-8" ?>
       <rss version="2.0">
         <channel>
-          <title>Your Site's Name</title>
+          <title>Abhinandh S</title>
           <link>https://abhinandhs.in</link>
           <description>Latest articles from the website</description>
           <language>en-us</language>
