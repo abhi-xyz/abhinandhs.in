@@ -1,4 +1,5 @@
 # roxide
+published: 2024-11-01
 
 `roxide` is a lightweight, high-performance alternative to the traditional `rm` command, designed with an emphasis on speed and data preservation. Unlike standard rm, which permanently deletes files, roxide safely moves them to a designated "`trash`" directory. This approach enables efficient and fast file removal without risking unintended data loss.
 
@@ -21,7 +22,7 @@
 
 ### Build
 
-```bash
+```javascript
 git clone https://github.com/abhi-xyz/roxide.git --depth=1 
 cd roxide
 cargo build --release

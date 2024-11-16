@@ -1,7 +1,14 @@
 # Hello, World!
-Published: 2024-11-01
+published: 2024-11-01
 
 Welcome to my first blog post! This content is written in Markdown and styled using GitHub Flavored Markdown.
+
+
+```Rust
+main() {
+    println!("hello world!");
+}
+```
 
 ## Features
 - **Light and Dark Mode** support

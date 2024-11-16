@@ -1,40 +1,71 @@
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { extract } from "$std/front_matter/yaml.ts";
+import { Head } from "$fresh/runtime.ts";
+
 import { CSS, render } from "@deno/gfm";
 
-const markdown = `
-# Hello, world!
+// Add support for TypeScript, Bash, and Rust.
+import "npm:prismjs@1.29.0/components/prism-typescript.js";
+import "npm:prismjs@1.29.0/components/prism-bash.js";
+import "npm:prismjs@1.29.0/components/prism-rust.js";
+import "npm:prismjs@1.29.0/components/prism-nix.js";
 
-| Type | Value |
-| ---- | ----- |
-| x    | 42    |
+// for extracting yaml from markdown 
+import { test, extractYaml } from "jsr:@std/front-matter";
 
-\`\`\`js
-console.log("Hello, world!");
-\`\`\`
-`;
+interface Page {
+  markdown: string;
+  data: Record<string, unknown>;
+}
 
-const body = render(markdown, {
-  baseUrl: "https://example.com",
-});
-
-const html = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      main {
-        max-width: 800px;
-        margin: 0 auto;
+export const handler: Handlers<Page> = {
+  async GET(_req, ctx) {
+    let rawMarkdown = "";
+    if (ctx.params.slug === "remote") {
+      const resp = await fetch(
+        `https://raw.githubusercontent.com/denoland/fresh/main/docs/latest/introduction/index.md`,
+      );
+      if (resp.status !== 200) {
+        return ctx.render(undefined);
       }
-      ${CSS}
-    </style>
-  </head>
-  <body>
-    <main data-color-mode="light" data-light-theme="light" data-dark-theme="dark" class="markdown-body">
-      ${body}
-    </main>
-  </body>
-</html>
-`;
+      rawMarkdown = await resp.text();
+    } else if (ctx.params.slug === "string") {
+      rawMarkdown = `---
+description: test
+---
 
+## big text
+
+Look, it's working. _This is in italics._
+      
+      `;
+    } else if (ctx.params.slug === "file") {
+      rawMarkdown = await Deno.readTextFile("text.md");
+    } else {
+      return ctx.render(undefined);
+    }
+    const { attrs, body } = extract(rawMarkdown);
+    return ctx.render({ markdown: body, data: attrs });
+  },
+};
+
+export default function MarkdownPage({ data }: PageProps<Page | null>) {
+  if (!data) {
+    return <h1>File not found.</h1>;
+  }
+
+  return (
+    <>
+      <Head>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      </Head>
+      <main>
+        <div>{JSON.stringify(data.data)}</div>
+        <div
+          class="markdown-body"
+          dangerouslySetInnerHTML={{ __html: render(data?.markdown) }}
+        />
+      </main>
+    </>
+  );
+}

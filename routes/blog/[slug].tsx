@@ -1,6 +1,17 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { CSS, render } from "@deno/gfm";
 import { join } from "$std/path/mod.ts";
+import Navbar from "../../islands/Header.tsx";
+
+// Add support for TypeScript, Bash, and Rust.
+import "npm:prismjs@1.29.0/components/prism-typescript.js";
+import "npm:prismjs@1.29.0/components/prism-bash.js";
+import "npm:prismjs@1.29.0/components/prism-rust.js";
+import "npm:prismjs@1.29.0/components/prism-nix.js";
+
+// for extracting yaml from markdown 
+import { test, extractYaml } from "jsr:@std/front-matter";
+
 
 // Define the structure of a post
 interface Post {
@@ -41,9 +52,11 @@ export const handler: Handlers<Post> = {
 // Render the post as HTML
 export default function BlogPostPage({ data }: PageProps<Post>) {
   return (
-    <main class="max-w-screen-md mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold">{data.title}</h1>
-      <time class="text-gray-500">{data.publishedAt}</time>
+    <body className="bg-latte-crust dark:bg-mocha-crust text-latte-text dark:text-mocha-text">
+    <Navbar />
+    <main class="max-w-3xl mx-auto px-4 py-8">
+      { /* <h1 class="text-3xl font-bold">{data.title}</h1>
+      <time class="text-gray-500">{data.publishedAt}</time> */ }
       <style>
         {CSS}
       </style>
@@ -55,5 +68,6 @@ export default function BlogPostPage({ data }: PageProps<Post>) {
         dangerouslySetInnerHTML={{ __html: data.content }}
       />
     </main>
+    </body>
   );
 }
