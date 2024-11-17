@@ -2,6 +2,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { CSS, render } from "@deno/gfm";
 import { join } from "$std/path/mod.ts";
 import Navbar from "../../islands/Header.tsx";
+import Footer from "../../components/Footer.tsx";
 
 // Add support for TypeScript, Bash, and Rust.
 import "npm:prismjs@1.29.0/components/prism-typescript.js";
@@ -10,7 +11,7 @@ import "npm:prismjs@1.29.0/components/prism-rust.js";
 import "npm:prismjs@1.29.0/components/prism-nix.js";
 
 // for extracting yaml from markdown 
-import { test, extractYaml } from "jsr:@std/front-matter";
+// import { test, extractYaml } from "jsr:@std/front-matter";
 
 
 // Define the structure of a post
@@ -22,7 +23,7 @@ interface Post {
 
 // Handler to fetch the Markdown file based on the slug
 export const handler: Handlers<Post> = {
-  async GET(req, ctx) {
+  async GET(_req, ctx) {
     const { slug } = ctx.params; // Extract slug from the route
     try {
       const filePath = join("./posts", `${slug}.md`);
@@ -43,7 +44,7 @@ export const handler: Handlers<Post> = {
       };
 
       return ctx.render(post);
-    } catch (error) {
+    } catch (_error) {
       return new Response("Post not found", { status: 404 });
     }
   },
@@ -68,6 +69,7 @@ export default function BlogPostPage({ data }: PageProps<Post>) {
         dangerouslySetInnerHTML={{ __html: data.content }}
       />
     </main>
+    <Footer />
     </body>
   );
 }
