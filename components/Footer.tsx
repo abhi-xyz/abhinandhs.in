@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer class="text-center clear-both">
+      <footer class="text-center clear-both h-lvh">
         <div>
           <br />
           <br />
@@ -45,7 +45,7 @@ export default function Footer() {
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </a>
-            <a class="p-2" href="/index.xml" target="_blank">
+            <a class="p-2" href="/rss" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
