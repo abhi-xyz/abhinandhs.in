@@ -9,6 +9,7 @@ import * as $articles_id_ from "./routes/articles/[id].tsx";
 import * as $articles_index from "./routes/articles/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $rss from "./routes/rss.ts";
 import * as $Header from "./islands/Header.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -21,6 +22,7 @@ const manifest = {
     "./routes/articles/index.tsx": $articles_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/rss.ts": $rss,
   },
   islands: {
     "./islands/Header.tsx": $Header,

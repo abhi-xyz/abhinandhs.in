@@ -8,6 +8,12 @@ export default function App({ Component }: PageProps) {
         <title>Abhinandh S</title>
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <link rel="stylesheet" href="/styles.css" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Abhi's Blog RSS Feed"
+          href="/rss"
+        />
       </head>
       <body>
         <Component />
