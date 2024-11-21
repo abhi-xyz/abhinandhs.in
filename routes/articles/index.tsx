@@ -33,11 +33,11 @@ export default function Home(props: PageProps<Data>) {
 
 function PostEntry(props: { post: Post; locales: string[] }) {
   const { post, locales } = props;
-  const dateFmt = new Intl.DateTimeFormat(locales, { dateStyle: "short" });
+  const dateFmt = new Intl.DateTimeFormat(locales, { dateStyle: "medium" });
   return (
     <li class="border-t">
       <a href={`/articles/${post.id}`} class="py-2 flex group gap-4">
-        <div>{dateFmt.format(post.publishAt)}</div>
+        <div className="min-w-24">{dateFmt.format(post.publishAt)}</div>
         <div>
           <h2 class="font-bold group-hover:underline">{post.title}</h2>
           <p class="text-gray-600">{post.snippet}</p>

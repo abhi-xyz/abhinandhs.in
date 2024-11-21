@@ -1,7 +1,7 @@
 ---
 title: roxide
 publish_at: 2024-11-01T13:49:37.703Z
-snippet: My first blog entry.
+snippet: A lightweight, high-performance alternative to the traditional rm command, written in rust.
 ---
 
 `roxide` is a lightweight, high-performance alternative to the traditional `rm`
