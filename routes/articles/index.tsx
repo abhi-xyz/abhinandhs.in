@@ -36,7 +36,7 @@ function PostEntry(props: { post: Post; locales: string[] }) {
   const dateFmt = new Intl.DateTimeFormat(locales, { dateStyle: "short" });
   return (
     <li class="border-t">
-      <a href={`/blog/${post.id}`} class="py-2 flex group gap-4">
+      <a href={`/articles/${post.id}`} class="py-2 flex group gap-4">
         <div>{dateFmt.format(post.publishAt)}</div>
         <div>
           <h2 class="font-bold group-hover:underline">{post.title}</h2>

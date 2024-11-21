@@ -12,7 +12,7 @@ export default function Footer() {
               target="_blank"
             >
               <img
-                src="/icons/feather/github.svg"
+                src="/assets/icons/feather/github.svg"
                 style="max-height:1.5em"
                 alt="GitHub"
                 title="Subscribe via RSS for updates."
@@ -20,7 +20,7 @@ export default function Footer() {
             </a>
             <a class="p-2" href="mailto:abhinandhsuby@proton.me">
               <img
-                src="/icons/feather/mail.svg"
+                src="/assets/icons/feather/mail.svg"
                 target="_blank"
                 style="max-height:1.5em"
                 alt="Email"
@@ -29,7 +29,7 @@ export default function Footer() {
             </a>
             <a class="p-2" href="/index.xml" target="_blank">
               <img
-                src="/icons/feather/rss.svg"
+                src="/assets/icons/feather/rss.svg"
                 style="max-height:1.5em"
                 alt="RSS Feed"
                 title="Subscribe via RSS for updates."
@@ -37,7 +37,7 @@ export default function Footer() {
             </a>
             <a class="p-2" href="https://x.com/Ungraduate_Abhi" target="_blank">
               <img
-                src="/icons/feather/twitter.svg"
+                src="/assets/icons/feather/twitter.svg"
                 style="max-height:1.5em"
                 alt="Twitter"
                 title="Subscribe via RSS for updates."
@@ -54,7 +54,7 @@ export default function Footer() {
               MIT License
             </a>{" "}
             and is available{" "}
-            <a href="https://github.com/abhi-xyz/abhi-xyz.github.io">here</a>.
+            <a href="https://github.com/abhi-xyz/abhinandhs.in">here</a>.
             Articles are licensed under{" "}
             <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
               Creative Commons with the Share-alike Clause (CC-BY-SA 4.0)
