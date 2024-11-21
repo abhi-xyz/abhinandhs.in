@@ -11,7 +11,7 @@
   }
   
   .markdown-body .comment {
-    @apply !text-mocha-overlay1
+    @apply !text-mocha-subtext1
   }
  
   .markdown-body .function {
@@ -23,6 +23,6 @@
   }
   
   pre {
-    @apply dark:!bg-mocha-base !bg-latte-base
+    @apply dark:!bg-mocha-base !bg-latte-base dark:!text-mocha-text !text-latte-text
   }
 }
