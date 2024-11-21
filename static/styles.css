@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* https://github.com/denoland/deno-gfm/blob/main/style/main.scss */
+
+@layer base {
+  
+  .markdown-body {
+    @apply bg-latte-crust text-latte-text dark:bg-mocha-crust dark:text-mocha-text;
+  }
+  
+  .markdown-body .comment {
+    @apply !text-mocha-overlay1
+  }
+ 
+  .markdown-body .function {
+    @apply dark:!text-mocha-mauve !text-latte-mauve
+  }
+  
+  .markdown-body .string {
+    @apply dark:!text-mocha-green !text-latte-green
+  }
+  
+  pre {
+    @apply dark:!bg-mocha-base !bg-latte-base
+  }
+}

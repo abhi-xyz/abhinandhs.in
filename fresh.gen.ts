@@ -5,19 +5,11 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
-import * as $articles_index from "./routes/articles/index.tsx";
-import * as $blog from "./routes/blog.tsx";
-import * as $blog_slug_ from "./routes/blog/[slug].tsx";
+import * as $blog_id_ from "./routes/blog/[id].tsx";
+import * as $blog_index from "./routes/blog/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
-import * as $roxide from "./routes/roxide.tsx";
-import * as $rss from "./routes/rss.tsx";
-import * as $wip_index from "./routes/wip/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
-import * as $GetArticles from "./islands/GetArticles.tsx";
 import * as $Header from "./islands/Header.tsx";
-import * as $Navbar from "./islands/Navbar.tsx";
-import * as $ThemeSwitcher from "./islands/ThemeSwitcher.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -25,21 +17,13 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/api/joke.ts": $api_joke,
-    "./routes/articles/index.tsx": $articles_index,
-    "./routes/blog.tsx": $blog,
-    "./routes/blog/[slug].tsx": $blog_slug_,
+    "./routes/blog/[id].tsx": $blog_id_,
+    "./routes/blog/index.tsx": $blog_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
-    "./routes/roxide.tsx": $roxide,
-    "./routes/rss.tsx": $rss,
-    "./routes/wip/index.tsx": $wip_index,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
-    "./islands/GetArticles.tsx": $GetArticles,
     "./islands/Header.tsx": $Header,
-    "./islands/Navbar.tsx": $Navbar,
-    "./islands/ThemeSwitcher.tsx": $ThemeSwitcher,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

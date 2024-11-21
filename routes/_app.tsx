@@ -5,14 +5,7 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Abhinandh S</title>
-        <link
-          rel="alternate"
-          title="Abhinandh S"
-          href="/rss"
-          type="application/rss+xml"
-        />
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+        <title>abhinandhs.in</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
