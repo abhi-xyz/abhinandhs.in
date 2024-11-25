@@ -18,10 +18,16 @@ snippet: A lightweight, high-performance alternative to the traditional rm comma
 - `roxide some/dir/ -p .pdf`: will remove files matching the pattern from some/dir
 - `roxide some/dir/ -rp .pdf`: will recursively remove files matching the pattern from some/dir
 - `roxide some/dir/ -rp .pdf -l`: will list files, like dry run
+- `roxide some/* -i never`: will never prompt
+- `roxide some/* -i once`: Prompt once before removing more than three files or when removing recursivly
+- `roxide some/* -i always`: Prompt before every removal
+- `roxide some/* -p .pdf -i always`: Prompt before every removal
+
 
 > [!WARNING]
-> Do not use sudo. Support for sudo is still work in progress.
-> It is not possible to bring back files removed using patterns with `revert` flag but you can still access it from Trash dir
+> 1. Do not use sudo. Support for sudo is still work in progress.
+> 2. It wont warn about write protected contents (wip)
+> 3. It is not possible to bring back files removed using patterns with `revert` flag but you can still access it from Trash dir
 
 ## Installation
 
