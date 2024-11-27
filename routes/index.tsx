@@ -32,7 +32,7 @@ export default function HomePage(props: PageProps<Data>) {
   const { posts } = props.data;
   return (
     <>
-      <body className=" h-lvh dark:bg-just-mirage bg-latte-crust dark:text-mocha-text text-latte-text">
+      <body className="p-2 h-lvh dark:bg-just-mirage bg-latte-crust dark:text-mocha-text text-latte-text">
         <PortfolioHeader />
 
         <div class="mx-auto max-w-3xl flex flex-col justify-center">
