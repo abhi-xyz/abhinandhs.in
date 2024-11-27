@@ -38,8 +38,8 @@ export default function HomePage(props: PageProps<Data>) {
         <div class="mx-auto max-w-3xl flex flex-col justify-center">
           <div className="h-4"></div>
           <div class="">
-            <h1 className="text-3xl" id="hi">Hello, I'am</h1>
-            <h1 className="text-6xl font-extrabold" id="hi">
+            <h1 className="max-tablet:text-2xl text-4xl" id="hi">Hello, I'am</h1>
+            <h1 className="max-tablet:text-4xl text-6xl font-extrabold" id="hi">
               Abhinandh S
               <span class="text-just-red">
                 .
@@ -51,7 +51,7 @@ export default function HomePage(props: PageProps<Data>) {
                 .
               </span>
             </h1>
-            <h1 class="border-l-4 border-l-just-red pl-4 font-bold text-4xl mt-12">
+            <h1 class="border-l-4 border-l-just-red pl-4 font-bold max-tablet:text-3xl text-4xl mt-12">
               About Me
               <span class="text-just-red">
                 .
@@ -68,7 +68,7 @@ export default function HomePage(props: PageProps<Data>) {
             </p>
 
             <div id="list articles" class="mx-auto max-w-3xl">
-              <h1 class="border-l-4 border-l-just-red pl-4 font-bold text-4xl mt-12">
+              <h1 class="border-l-4 border-l-just-red pl-4 font-bold max-tablet:text-3xl text-4xl mt-12">
                 Recent Posts
                 <span class="text-just-red">
                   .
