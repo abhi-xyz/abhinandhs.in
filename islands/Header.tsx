@@ -15,13 +15,22 @@ export default function PortfolioHeader() {
             {/* Desktop Menu */}
             <div class="flex max-tablet:hidden space-x-16 mt-12 pb-7 px-16">
               <a href="/" class="hover:text-just-red">Home</a>
-              <a href="/portfolio" class="hover:text-just-red">
+              <a
+                href="/portfolio"
+                class="hover:text-just-red aria-[current]:text-just-red"
+              >
                 Portfolio
               </a>
-              <a href="/articles" class="hover:text-just-red">
+              <a
+                href="/articles"
+                class="hover:text-just-red aria-[current]:text-just-red"
+              >
                 Articles
               </a>
-              <a href="/about" class="hover:text-just-red">
+              <a
+                href="/about"
+                class="hover:text-just-red aria-[current]:text-just-red"
+              >
                 About
               </a>
             </div>
@@ -60,19 +69,19 @@ export default function PortfolioHeader() {
             </a>
             <a
               href="/portfolio"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 hover:text-just-red aria-[current]:text-just-red"
             >
               Portfolio
             </a>
             <a
               href="/articles"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 hover:text-just-red aria-[current]:text-just-red"
             >
               Articles
             </a>
             <a
               href="/about"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 hover:text-just-red aria-[current]:text-just-red"
             >
               About
             </a>

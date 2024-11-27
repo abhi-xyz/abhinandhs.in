@@ -35,7 +35,21 @@
   .markdown-body .string {
     @apply dark:!text-mocha-green !text-latte-green
   }
- 
+
+
+/* Give links pointing to the current page a green color */
+/*
+a[aria-current="page"] {
+  @apply text-just-red;
+}
+  */
+/* Color all ancestor links of the current page */
+/*
+  a[aria-current="true"] {
+  @apply text-just-red;
+}
+  */
+
   p a {
     @apply !text-just-red;
   }
