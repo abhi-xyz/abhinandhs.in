@@ -9,7 +9,7 @@ export const handler: Handlers = {
       .map((post) => `
         <item>
           <title><![CDATA[${post.title}]]></title>
-          <link>https://example.com/articles/${post.id}</link>
+          <link>https://abhinandhs.in/articles/${post.id}</link>
           <description><![CDATA[${post.snippet}]]></description>
           <pubDate>${new Date(post.publishAt).toUTCString()}</pubDate>
         </item>
@@ -20,7 +20,7 @@ export const handler: Handlers = {
       <rss version="2.0">
         <channel>
           <title>Abhi's Blog</title>
-          <link>https://example.com</link>
+          <link>https://abhinandhs.in</link>
           <description>Latest articles and updates from Abhi's blog</description>
           ${items}
         </channel>

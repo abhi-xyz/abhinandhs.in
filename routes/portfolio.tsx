@@ -28,7 +28,7 @@ function PostEntry(props: { post: Post }) {
   );
 }
 
-export default function HomePage(props: PageProps<Data>) {
+export default function PortfolioPage(props: PageProps<Data>) {
   const { posts } = props.data;
   return (
     <>
@@ -78,7 +78,7 @@ export default function HomePage(props: PageProps<Data>) {
                 {posts.map((post) => <PostEntry post={post} />)}
               </ul>
             </div>
-            <div className="border-b broder-latte-text dark:border-mocha-text"></div>
+            <div className="border-b border-mocha-text"></div>
           </div>
           <Footer />
         </div>

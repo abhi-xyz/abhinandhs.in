@@ -5,7 +5,13 @@
 /* https://github.com/denoland/deno-gfm/blob/main/style/main.scss */
 
 @layer base {
-  
+    @font-face {
+    font-family: 'Niconne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/Niconne-Regular.ttf") format('woff2');
+  }
   .markdown-body {
     @apply bg-latte-crust text-latte-text dark:bg-mocha-crust dark:text-mocha-text;
   }

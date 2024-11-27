@@ -4,30 +4,44 @@ publish_at: 2024-11-25T06:54:03.749Z
 snippet: A lightweight, high-performance alternative to the traditional rm command, written in rust.
 ---
 
-`roxide` is a lightweight, high-performance alternative to the traditional `rm` command, designed with an emphasis on speed and data preservation. Unlike standard rm, which permanently deletes files, roxide safely moves them to a designated "`trash`" directory. This approach enables efficient and fast file removal without risking unintended data loss.
+`roxide` is a lightweight, high-performance alternative to the traditional `rm`
+command, designed with an emphasis on speed and data preservation. Unlike
+standard rm, which permanently deletes files, roxide safely moves them to a
+designated "`trash`" directory. This approach enables efficient and fast file
+removal without risking unintended data loss.
 
-**Note**: I am an amateur Rust programmer, so while this code might not be the most refined, it prioritizes safety and has been thoroughly tested. If you have ideas for improvement or notice any issues, contributions are very welcome! This project is open to suggestions, code reviews, and pull requests from developers of all experience levels.
+**Note**: I am an amateur Rust programmer, so while this code might not be the
+most refined, it prioritizes safety and has been thoroughly tested. If you have
+ideas for improvement or notice any issues, contributions are very welcome! This
+project is open to suggestions, code reviews, and pull requests from developers
+of all experience levels.
 
 ## Getting started
 
-- `roxide file.txt`: files will moved to `trash dir`. ie, $HOME/.local/share/Trash/files/
-- `roxide revert` : restores perviously removed file/directory to its pervious path 
+- `roxide file.txt`: files will moved to `trash dir`. ie,
+  $HOME/.local/share/Trash/files/
+- `roxide revert` : restores perviously removed file/directory to its pervious
+  path
 - `roxide -r | --recursive` : Remove directories and their contents recursively
 - `roxide -f | --force` : Remove without moving to trash directory
 - `roxide -v | --verbose` : will print the file name and its out path
-- `roxide some/dir/ -p .pdf`: will remove files matching the pattern from some/dir
-- `roxide some/dir/ -rp .pdf`: will recursively remove files matching the pattern from some/dir
+- `roxide some/dir/ -p .pdf`: will remove files matching the pattern from
+  some/dir
+- `roxide some/dir/ -rp .pdf`: will recursively remove files matching the
+  pattern from some/dir
 - `roxide some/dir/ -rp .pdf -l`: will list files, like dry run
 - `roxide some/* -i never`: will never prompt
-- `roxide some/* -i once`: Prompt once before removing more than three files or when removing recursivly
+- `roxide some/* -i once`: Prompt once before removing more than three files or
+  when removing recursivly
 - `roxide some/* -i always`: Prompt before every removal
 - `roxide some/* -p .pdf -i always`: Prompt before every removal
 
-
 > [!WARNING]
+>
 > 1. Do not use sudo. Support for sudo is still work in progress.
 > 2. It wont warn about write protected contents (wip)
-> 3. It is not possible to bring back files removed using patterns with `revert` flag but you can still access it from Trash dir
+> 3. It is not possible to bring back files removed using patterns with `revert`
+>    flag but you can still access it from Trash dir
 
 ## Installation
 
@@ -48,7 +62,9 @@ cargo install roxide
 
 ### Nixos
 
-Add `roxide` as a flake input: In your flake.nix file, add the roxide input pointing to its GitHub repository.
+Add `roxide` as a flake input: In your flake.nix file, add the roxide input
+pointing to its GitHub repository.
+
 ```nix
 {
   inputs = {
@@ -66,7 +82,10 @@ Add `roxide` as a flake input: In your flake.nix file, add the roxide input poin
 }
 ```
 
-Include roxide in NixOS configuration: In the outputs section, set up nixosConfigurations and add roxide as a module to enable it within your system configuration.
+Include roxide in NixOS configuration: In the outputs section, set up
+nixosConfigurations and add roxide as a module to enable it within your system
+configuration.
+
 ```nix
 {
   outputs = { self, roxide, nixpkgs, ... }@inputs:
@@ -82,7 +101,10 @@ Include roxide in NixOS configuration: In the outputs section, set up nixosConfi
   };
 }
 ```
-Activate "roxide" in configuration.nix: Within configuration.nix, enable the "roxide" program:
+
+Activate "roxide" in configuration.nix: Within configuration.nix, enable the
+"roxide" program:
+
 ```nix
 {
   # Other configurations...
@@ -90,20 +112,26 @@ Activate "roxide" in configuration.nix: Within configuration.nix, enable the "ro
   program.roxide.enable = true; # note: its program not programs
 }
 ```
+
 Apply Configuration: After updating your configuration, apply it with:
+
 ```bash
 sudo nixos-rebuild switch --flake .
 ```
 
 ## known bugs
+
 - won't warn about git directory
-- can't use sudo 
+- can't use sudo
 - ~~golb pattern isn't working~~
 - ~~pattern -flag interfering with other flags~~
 - ~~cant remove a directory which is inside a directory~~
 
 ## Planned Features
-- ~~roxide revert:  Restores files from the trash directory to their original location.~~
-- roxide --gc <TIME_PERIOD>:  Performs garbage collection on trashed files, automatically clearing files older than a specified period.
-- ~~roxide -f:  Forces deletion without moving files to the trash directory.~~
-- roxide -s:  Shreds files for secure deletion.
+
+- ~~roxide revert: Restores files from the trash directory to their original
+  location.~~
+- roxide --gc <TIME_PERIOD>: Performs garbage collection on trashed files,
+  automatically clearing files older than a specified period.
+- ~~roxide -f: Forces deletion without moving files to the trash directory.~~
+- roxide -s: Shreds files for secure deletion.

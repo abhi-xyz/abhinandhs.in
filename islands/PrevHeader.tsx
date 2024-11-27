@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
 
-export default function PortfolioHeader() {
+export default function Navbar() {
   // State for handling the mobile menu toggle
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -9,19 +9,27 @@ export default function PortfolioHeader() {
 
   return (
     <div class="font-bold">
-      <nav class="w-full min-h-32 max-tablet:min-h-16 top-0 left-0 z-10">
-        <div class="mx-auto px-8">
-          <div class="flex justify-end items-center pt-8 max-tablet:py-4">
+      <nav class="bg-mocha-base shadow-md w-full min-h-32 max-tablet:min-h-16 top-0 left-0 z-10">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center pt-8 max-tablet:py-4">
+            {/* Logo */}
+            <div
+              class="text-5xl max-tablet:text-2xl font-bold text-mocha-text"
+              style={{ fontFamily: "'Helvetica Neue', san-serif" }}
+            >
+              ABHINANDH S<span class="text-just-red">.</span>
+            </div>
+
             {/* Desktop Menu */}
-            <div class="flex max-tablet:hidden space-x-16 mt-12 pb-7 px-16">
-              <a href="/" class="hover:text-just-red">Home</a>
-              <a href="/portfolio" class="hover:text-just-red">
+            <div class="flex max-tablet:hidden space-x-6 mt-12 pb-7">
+              <a href="/" class="text-mocha-text hover:text-just-red">Home</a>
+              <a href="/portfolio" class="text-mocha-text hover:text-just-red">
                 Portfolio
               </a>
-              <a href="/articles" class="hover:text-just-red">
+              <a href="/articles" class="text-mocha-text hover:text-just-red">
                 Articles
               </a>
-              <a href="/about" class="hover:text-just-red">
+              <a href="/about" class="text-mocha-text hover:text-just-red">
                 About
               </a>
             </div>
@@ -30,7 +38,7 @@ export default function PortfolioHeader() {
             <div class="hidden max-tablet:flex">
               <button
                 onClick={toggleMenu}
-                class="focus:outline-none"
+                class="text-mocha-text focus:outline-none"
               >
                 {/* Hamburger Icon */}
                 <svg
@@ -58,25 +66,25 @@ export default function PortfolioHeader() {
           >
             <a
               href="/"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 text-mocha-text hover:text-just-red"
             >
               Home
             </a>
             <a
               href="/portfolio"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 text-mocha-text hover:text-just-red"
             >
               Portfolio
             </a>
             <a
               href="/articles"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 text-mocha-text hover:text-just-red"
             >
               Articles
             </a>
             <a
               href="/about"
-              class="block py-2 px-4 hover:text-just-red"
+              class="block py-2 px-4 text-mocha-text hover:text-just-red"
             >
               About
             </a>

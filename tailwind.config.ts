@@ -1,3 +1,4 @@
+import { white } from "$std/fmt/colors.ts";
 import { type Config } from "tailwindcss";
 
 export default {
@@ -22,10 +23,14 @@ export default {
       serif: ["Merriweather", "serif"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald", "ui-serif"], // Adds a new `font-display` class
+      handwritting: ["Niconne"], // Adds a new `font-display` class
     },
     colors: {
-      vibez: {
-        "red": "#e52e71",
+      just: {
+        mirage: "#1B181F",
+        charade: "#2D2636",
+        red: "#e52e71",
+        white: "#FFFDFF",
       },
       latte: {
         rosewater: "#dc8a78",

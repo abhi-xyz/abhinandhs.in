@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer class="text-center clear-both">
+      <footer class="text-center clear-both h-lvh">
         <div>
           <br />
           <br />
