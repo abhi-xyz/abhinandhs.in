@@ -35,7 +35,10 @@
   .markdown-body .string {
     @apply dark:!text-mocha-green !text-latte-green
   }
-  
+ 
+  p a {
+    @apply !text-just-red;
+  }
   pre {
     @apply dark:!bg-mocha-base !bg-latte-base dark:!text-mocha-text !text-latte-text
   }
