@@ -29,7 +29,7 @@ export default function PostPage(props: PageProps<Data>) {
   const dateFmt = new Intl.DateTimeFormat(locales, { dateStyle: "full" });
   const html = gfm.render(post.content);
   return (
-    <body className="!bg-latte-crust dark:!bg-mocha-crust !text-latte-text dark:!text-mocha-text">
+    <body className="h-fit !bg-latte-crust dark:!bg-mocha-crust !text-latte-text dark:!text-mocha-text">
       <Navbar />
       <div class="px-4 mx-auto max-w-3xl">
         <p class="mt-12">{dateFmt.format(post.publishAt)}</p>
@@ -40,8 +40,8 @@ export default function PostPage(props: PageProps<Data>) {
             " markdown-body"}
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <Footer />
       </div>
-      <Footer />
     </body>
   );
 }

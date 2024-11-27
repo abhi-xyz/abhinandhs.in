@@ -63,6 +63,39 @@ export default function HomePage(props: PageProps<Data>) {
               </span>
             </h1>
             <br />
+            {
+              /*
+
+            <img
+              src="https://activity-graph.herokuapp.com/graph?username=abhi-xyz&theme=tokyonight&hide_border=true"
+              alt="GitHub Activity Graph"
+              width="600"
+            />
+            <img
+              src="https://github-contribution-stats.vercel.app/api/?username=abhi-xyz&theme=tokyonight&hide_border=true"
+              alt="GitHub Contribution Graph"
+              width="400"
+            />
+
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=abhi-xyz&show_icons=true&theme=tokyonight&hide_border=true"
+              alt="GitHub Stats"
+              width="400"
+            />
+            <img
+              src="https://streak-stats.demolab.com/?user=abhi-xyz&theme=tokyonight&hide_border=true"
+              alt="GitHub Streak"
+              width="400"
+            />
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhi-xyz&layout=compact&theme=tokyonight&hide_border=true"
+              alt="Top Languages"
+              width="400"
+
+            />
+            */
+            }
+
             <p>
               I'm Abhinandh S. I am a 21 old guy from India, who loves computers
               and softwares.

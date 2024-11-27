@@ -13,7 +13,6 @@ import * as $index from "./routes/index.tsx";
 import * as $portfolio from "./routes/portfolio.tsx";
 import * as $rss from "./routes/rss.ts";
 import * as $Header from "./islands/Header.tsx";
-import * as $PrevHeader from "./islands/PrevHeader.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -31,7 +30,6 @@ const manifest = {
   },
   islands: {
     "./islands/Header.tsx": $Header,
-    "./islands/PrevHeader.tsx": $PrevHeader,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

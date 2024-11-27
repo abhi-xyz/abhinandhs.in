@@ -25,7 +25,7 @@
   }
   
   .markdown-body .comment {
-    @apply !text-mocha-subtext1
+    @apply dark:!text-mocha-subtext1
   }
  
   .markdown-body .function {

@@ -18,15 +18,15 @@ export const handler: Handlers<Data, State> = {
 export default function Home(props: PageProps<Data>) {
   const { posts, locales } = props.data;
   return (
-    <body className="!bg-latte-crust dark:!bg-mocha-crust !text-latte-text dark:!text-mocha-text">
+    <body className="h-lvh !bg-latte-crust dark:!bg-mocha-crust !text-latte-text dark:!text-mocha-text">
       <Navbar />
       <div class="px-4 mx-auto max-w-3xl">
         <h1 class="font-bold text-5xl mt-12">Abhi's Blog</h1>
         <ul class="mt-8">
           {posts.map((post) => <PostEntry post={post} locales={locales} />)}
         </ul>
+        <Footer />
       </div>
-      <Footer />
     </body>
   );
 }
