@@ -108,8 +108,9 @@ export default function Footer() {
               class="text-just-red"
               href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
             >
-              Creative Commons with the Share-alike Clause (CC-BY-SA 4.0)
-            </a>.
+              Creative Commons
+            </a>{" "}
+            with the Share-alike Clause (CC-BY-SA 4.0).
           </p>
           <br />
           <br />
