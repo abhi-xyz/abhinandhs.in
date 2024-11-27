@@ -12,6 +12,14 @@
     font-display: swap;
     src: url("/assets/fonts/Niconne-Regular.ttf") format('woff2');
   }
+  @font-face {
+    font-family: 'Moderustic';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/assets/fonts/Moderustic-VariableFont_wght.ttf") format('woff2');
+  }
+
   .markdown-body {
     @apply bg-latte-crust text-latte-text dark:bg-mocha-crust dark:text-mocha-text;
   }

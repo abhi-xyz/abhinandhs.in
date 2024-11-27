@@ -1,6 +1,5 @@
 a basic configuration.nix
 
-
 ```nix
 { config, lib, pkgs, ... }:
 

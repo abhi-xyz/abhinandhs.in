@@ -39,14 +39,14 @@ export async function loadPost(id: string): Promise<Post | null> {
   };
 }
 
-// reads dir /data/posts and takes all .md files and 
+// reads dir /data/posts and takes all .md files and
 // takes filename without .md and git it to loadPost function
 export async function listPosts(): Promise<Post[]> {
   // empty Promise to hold all posts
   const promises = [];
   for await (const entry of Deno.readDir("./data/posts")) {
     const id = entry.name.replace(".md", "");
-    promises.push(loadPost(id)); // for post in posts push into promises like Vec 
+    promises.push(loadPost(id)); // for post in posts push into promises like Vec
   }
   const posts = await Promise.all(promises) as Post[];
   posts.sort((a, b) => b.publishAt.getTime() - a.publishAt.getTime()); // sort the posts by publish at date

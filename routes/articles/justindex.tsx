@@ -2,7 +2,6 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { listPosts, Post } from "../../utils/posts.ts";
 import { State } from "../../utils/state.ts";
 
-
 interface Data extends State {
   posts: Post[];
 }

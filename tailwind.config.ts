@@ -1,4 +1,3 @@
-import { white } from "$std/fmt/colors.ts";
 import { type Config } from "tailwindcss";
 
 export default {
@@ -24,6 +23,7 @@ export default {
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald", "ui-serif"], // Adds a new `font-display` class
       handwritting: ["Niconne"], // Adds a new `font-display` class
+      mordern: ["Moderustic"], // Adds a new `font-display` class
     },
     colors: {
       just: {

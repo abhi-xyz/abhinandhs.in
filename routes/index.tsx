@@ -18,7 +18,7 @@ function PostEntry(props: { post: Post }) {
   const { post } = props;
   return (
     <li class="border-t py-2">
-      <a href={`/**/articles/${post.id}`} class="py-2 flex group gap-4">
+      <a href={`/articles/${post.id}`} class="py-2 flex group gap-4">
         <div>
           <h2 class="font-bold group-hover:underline">{post.title}</h2>
           <p class="text-gray-600">{post.snippet}</p>
@@ -38,8 +38,13 @@ export default function HomePage(props: PageProps<Data>) {
         <div class="mx-auto max-w-3xl flex flex-col justify-center">
           <div className="h-4"></div>
           <div class="">
-            <h1 className="max-tablet:text-2xl text-4xl" id="hi">Hello, I'am</h1>
-            <h1 className="max-tablet:text-4xl text-6xl font-extrabold" id="hi">
+            <h1 className="max-tablet:text-2xl text-4xl" id="hi">
+              Hello, I'am
+            </h1>
+            <h1
+              className="max-tablet:text-4xl text-6xl font-extrabold font-mordern"
+              id="hi"
+            >
               Abhinandh S
               <span class="text-just-red">
                 .
@@ -78,7 +83,8 @@ export default function HomePage(props: PageProps<Data>) {
                 {posts.map((post) => <PostEntry post={post} />)}
               </ul>
             </div>
-            <div className="border-b broder-latte-text dark:border-mocha-text"></div>
+            <div className="border-b broder-latte-text dark:border-mocha-text">
+            </div>
           </div>
           <Footer />
         </div>
