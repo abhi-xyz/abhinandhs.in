@@ -12,6 +12,7 @@ import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $portfolio from "./routes/portfolio.tsx";
 import * as $rss from "./routes/rss.ts";
+import * as $search from "./routes/search.tsx";
 import * as $Header from "./islands/Header.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -27,6 +28,7 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/portfolio.tsx": $portfolio,
     "./routes/rss.ts": $rss,
+    "./routes/search.tsx": $search,
   },
   islands: {
     "./islands/Header.tsx": $Header,

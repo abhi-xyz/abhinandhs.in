@@ -32,10 +32,10 @@ export default function HomePage(props: PageProps<Data>) {
   const { posts } = props.data;
   return (
     <>
-      <body className="p-2 h-lvh dark:bg-just-mirage bg-latte-crust dark:text-mocha-text text-latte-text">
+      <body className="h-lvh dark:bg-just-mirage bg-latte-crust dark:text-mocha-text text-latte-text">
         <PortfolioHeader />
 
-        <div class="mx-auto max-w-3xl flex flex-col justify-center">
+        <div class="p-2 mx-auto max-w-3xl flex flex-col justify-center">
           <div className="h-4"></div>
           <div class="">
             <h1 className="max-tablet:text-2xl text-4xl" id="hi">
