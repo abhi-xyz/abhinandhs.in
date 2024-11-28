@@ -33,7 +33,7 @@ export default function PostPage(props: PageProps<Data>) {
       <Navbar />
       <div class="px-4 mx-auto max-w-3xl">
         <p class="mt-12">{dateFmt.format(post.publishAt)}</p>
-        <p class="">{post.updatedAt}</p>
+        {/*<p class="">updated at: {post.updatedAt}</p>*/}
         <h1 class="font-bold text-5xl mt-2">{post.title}</h1>
         <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
         <div
