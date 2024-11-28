@@ -19,12 +19,11 @@ export const handler: Handlers = {
       `)
       .join("");
 
-    const rss = posts.map((post) =>
-      `<?xml version="1.0" encoding="UTF-8" ?>
+    const rss = `<?xml version="1.0" encoding="UTF-8" ?>
         <feed xmlns="http://www.w3.org/2005/Atom">
           <title>Abhi's Blog</title>
           <link href="https://abhinandhs.in"/>
-          <updated>${new Date(post.updatedAt).toUTCString()}</updated>
+          <updated>${new Date().toISOString()}</updated>
           <author>
           <name>Abhinandh S</name>
           </author>
@@ -32,8 +31,7 @@ export const handler: Handlers = {
 
           ${items}
 
-      </feed>`
-    ).join("");
+      </feed>`;
 
     return new Response(rss, {
       headers: {
