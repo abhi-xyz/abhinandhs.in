@@ -5,7 +5,10 @@ export const handler: Handlers = {
   async GET(_req, _ctx) {
     // fetched posts
     const posts = await listPosts();
-    // <summary>${post.snippet}</summary>
+    // it is possibe to put whole content of articles here with `<content>${post.content}</content>` but it will cause errors some times.
+    // Error: Invaild xml element :(
+    // So, its safer if we only put summary here,
+    // Users can still acess full content with fetch full content button if there client supports it.
     const items = posts
       .map((post) => `
         <entry>
@@ -13,7 +16,7 @@ export const handler: Handlers = {
            <link href="https://abhinandhs.in/articles/${post.id}" />
             <id>https://abhinandhs.in/articles/${post.id}</id>
              <updated>${new Date(post.updatedAt).toUTCString()}</updated>
-              <content>${post.content}</content>
+              <summary>${post.snippet}</summary>
           <published>${new Date(post.publishAt).toUTCString()}</published>
         </entry>
       `)
