@@ -16,6 +16,12 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
         <link
           rel="alternate"
+          type="application/atom+xml"
+          title="Abhi's Blog RSS Feed"
+          href="/feed.atom"
+        />
+        <link
+          rel="alternate"
           type="application/rss+xml"
           title="Abhi's Blog RSS Feed"
           href="/rss.xml"

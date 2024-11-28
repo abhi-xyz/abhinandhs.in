@@ -5,7 +5,7 @@ export const handler: Handlers = {
   async GET(_req, _ctx) {
     // fetched posts
     const posts = await listPosts();
-
+    // <summary>${post.snippet}</summary>
     const items = posts
       .map((post) => `
         <entry>
@@ -13,8 +13,8 @@ export const handler: Handlers = {
            <link href="https://abhinandhs.in/articles/${post.id}" />
             <id>https://abhinandhs.in/articles/${post.id}</id>
              <updated>${new Date(post.updatedAt).toUTCString()}</updated>
-              <summary>${post.snippet}</summary>
-          <pubDate>${new Date(post.publishAt).toUTCString()}</pubDate>
+              <content>${post.content}</content>
+          <published>${new Date(post.publishAt).toUTCString()}</published>
         </entry>
       `)
       .join("");
@@ -28,9 +28,7 @@ export const handler: Handlers = {
           <name>Abhinandh S</name>
           </author>
           <id>https://abhinandhs.in</id>
-
           ${items}
-
       </feed>`;
 
     return new Response(rss, {
