@@ -1,5 +1,5 @@
 import type { Handlers } from "$fresh/server.ts";
-import { listPosts } from "../utils/just_posts.ts";
+import { listPosts } from "../utils/posts.ts";
 
 export const handler: Handlers = {
   async GET(_req, _ctx) {
