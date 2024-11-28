@@ -18,7 +18,7 @@ export default function App({ Component }: PageProps) {
           rel="alternate"
           type="application/rss+xml"
           title="Abhi's Blog RSS Feed"
-          href="/rss"
+          href="/rss.xml"
         />
       </head>
       <body>
