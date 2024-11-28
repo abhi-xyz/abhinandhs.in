@@ -1,6 +1,7 @@
 ---
 title: Nix Functions To Setup Newsboat Urls
 publish_at: 2024-10-22T13:18:36.703Z
+updated_at: 2024-10-22T13:18:36.703Z
 snippet: Setting up your newsboat configuration using Nix functions.
 ---
 

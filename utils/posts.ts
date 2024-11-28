@@ -4,6 +4,7 @@ export interface Post {
   id: string;
   title: string;
   publishAt: Date;
+  updatedAt: string;
   snippet: string;
   content: string;
 }
@@ -25,6 +26,7 @@ export async function loadPost(id: string): Promise<Post | null> {
     id,
     title: params.title,
     publishAt,
+    updatedAt: params.updated_at,
     snippet: params.snippet,
     content: body,
   };
