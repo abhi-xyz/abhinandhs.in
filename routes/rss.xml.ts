@@ -10,7 +10,7 @@ export const handler: Handlers = {
         <item>
           <title><![CDATA[${post.title}]]></title>
           <link>https://abhinandhs.in/articles/${post.id}</link>
-          <description><![CDATA[${post.snippet}]]></description>
+          <description><![CDATA[${post.content}]]></description>
           <pubDate>${new Date(post.publishAt).toUTCString()}</pubDate>
         </item>
       `)
