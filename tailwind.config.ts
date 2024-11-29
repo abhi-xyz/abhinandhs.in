@@ -11,6 +11,7 @@ export default {
       display: "Oswald, ui-serif", // Adds a new `font-display` class
     },
   },
+  darkMode: "class",
   theme: {
     screens: {
       "mobile": "640px",

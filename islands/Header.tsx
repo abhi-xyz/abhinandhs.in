@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import ThemeToggle from "../islands/ThemeToggle.tsx";
 
 export default function PortfolioHeader() {
   // State for handling the mobile menu toggle
@@ -14,7 +15,13 @@ export default function PortfolioHeader() {
           <div class="flex justify-end items-center pt-8 max-tablet:py-4">
             {/* Desktop Menu */}
             <div class="flex max-tablet:hidden space-x-16 mt-12 pb-7 px-16">
-              <a href="/" class="hover:text-just-red">Home</a>
+              <ThemeToggle />
+              <a
+                href="/"
+                class="hover:text-just-red aria-[current='page']:text-just-red"
+              >
+                Home
+              </a>
               <a
                 href="/portfolio"
                 class="hover:text-just-red aria-[current]:text-just-red"
@@ -37,6 +44,8 @@ export default function PortfolioHeader() {
 
             {/* Mobile Hamburger Menu */}
             <div class="hidden max-tablet:flex">
+              <ThemeToggle />
+              <div className="pr-3"></div>
               <button
                 onClick={toggleMenu}
                 class="focus:outline-none"
@@ -44,12 +53,19 @@ export default function PortfolioHeader() {
                 {/* Hamburger Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="undefined"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-menu"
                 >
-                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
               </button>
             </div>

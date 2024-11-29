@@ -34,7 +34,6 @@ export default function HomePage(props: PageProps<Data>) {
     <>
       <body className="h-lvh dark:bg-just-mirage bg-latte-crust dark:text-mocha-text text-latte-text">
         <PortfolioHeader />
-
         <div class="p-2 mx-auto max-w-3xl flex flex-col justify-center">
           <div className="h-4"></div>
           <div class="">
