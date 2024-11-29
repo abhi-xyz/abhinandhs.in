@@ -6,6 +6,10 @@ export default function App({ Component }: PageProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Abhinandh S</title>
+        <meta
+          name="description"
+          content="Abhi's personal site"
+        />
         <link rel="icon" href="favicon.png" type="image/png" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
