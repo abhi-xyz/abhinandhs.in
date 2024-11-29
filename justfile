@@ -8,3 +8,6 @@ deploy:
   git add -A
   git commit -m "redesign"
   git push
+
+deno-update-fresh:
+  deno run -A -r https://fresh.deno.dev/update
