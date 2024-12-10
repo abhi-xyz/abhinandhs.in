@@ -5,7 +5,11 @@ import { loadPost, type Post } from "../../utils/posts.ts";
 import Footer from "../../components/Footer.tsx";
 import Navbar from "../../islands/Header.tsx";
 
+// https://unpkg.com/browse/prismjs@1.29.0/components/
 import "npm:prismjs@1.29.0/components/prism-rust.js";
+import "npm:prismjs@1.29.0/components/prism-lua.js";
+import "npm:prismjs@1.29.0/components/prism-yaml.js";
+import "npm:prismjs@1.29.0/components/prism-vim.js";
 import "npm:prismjs@1.29.0/components/prism-typescript.js";
 import "npm:prismjs@1.29.0/components/prism-bash.js";
 import "npm:prismjs@1.29.0/components/prism-nix.min.js";
